@@ -12,7 +12,7 @@ require("dotenv").config();
 const connection = require("./helper/connection");
 const userRoutes = require("../Server/Routers/user-router");
 const loginRoute = require("../Server/Routers/login-router");
-const taskRoutes = require("./Routers/task-router");
+const blogRoutes = require("./Routers/blog-router");
 const adminRouter = require("./Routers/admin-router");
 
 app.use(express.json());
@@ -23,7 +23,7 @@ connection();
 
 app.use('/user',userRoutes);
 app.use('/loguser',loginRoute);
-app.use('/api', taskRoutes);
+app.use('/api', blogRoutes);
 app.use('/admin', adminRouter);
 
 app.get('/logout', (req,res)=>{

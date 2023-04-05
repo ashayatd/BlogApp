@@ -1,7 +1,7 @@
-const task = require("../../models/tasks");
+const blog = require("../../models/blog");
 const jwt = require("jsonwebtoken");
 
-async function addTask(req, res) {
+async function addBlog(req, res) {
 
     try {
         let userCreated = jwt.verify(req.cookies.jwt, process.env.SECRET_KEY)._id;
@@ -11,21 +11,21 @@ async function addTask(req, res) {
             res.status(200);
             return res.send(JSON.stringify({ message: "Please Fill The Box!" }));
         }
-        const taskCreate = await task.create({
-            task: {
+        const blogCreate = await blog.create({
+            blog: {
                 title,
                 description
             },
             status,
             userCreated
         });
-        return res.status(201).json(taskCreate);
+        return res.status(201).json(blogCreate);
 
     } catch (err) {
-        console.log("Error in taks route:", err.message);
+        console.log("Error in Add Blog route:", err.message);
         return res.status(200);
     }
 
 }
 
-module.exports = addTask;
+module.exports = addBlog;
