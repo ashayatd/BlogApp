@@ -1,16 +1,15 @@
 const mongoose = require("mongoose");
 
-const tasksSchema = mongoose.Schema({
+const blogSchema = mongoose.Schema({
     task: {
             title: { type: String, require: true },
-            description: { type: String, require: false },
+            description: { type: String, require: true },
         },
-    status: { type: Boolean
-        },
+    status: { type: Boolean},
     userCreated: {
         type: String,
         required: true,
         }
 })
 
-module.exports = mongoose.model("tasks", tasksSchema);
+module.exports = mongoose.model("blog", blogSchema);

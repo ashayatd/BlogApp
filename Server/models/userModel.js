@@ -6,7 +6,7 @@ const userSchema = mongoose.Schema({
     username: {type:String, require:true, unique: true},
     password: {type:String, default:null},
     token: String,
-    role: {type:String, default:"user"} // Role of User
+    role: {type:String, default:"reader"} // Role of User
 })
 
 // Generate Auth Token
@@ -23,4 +23,4 @@ userSchema.methods.generateAuthToken = async function(){
     }
 }
 
-module.exports = mongoose.model("user", userSchema);
+module.exports = mongoose.model("reader", userSchema);
