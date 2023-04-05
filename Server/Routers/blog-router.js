@@ -9,6 +9,7 @@ const username = require("../controllers/blogs/username");
 const authenticate = require("../middleware/authenticate");
 
 
+
 routes.post("/addblog",authenticate, addblog );
 routes.get("/fetchblog",authenticate, fetchblog );
 routes.post("/deleteblog",authenticate, deleteblog );

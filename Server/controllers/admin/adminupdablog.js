@@ -1,12 +1,12 @@
-const task = require("../../models/tasks");
+const blog = require("../../models/blog");
 
-const adminupdatetitle = async (req, res)=>{
+const adminupdateblog = async (req, res)=>{
     try {
         let { ide, newTitle } = req.body;
         console.log(ide,"  ", newTitle);
         const id = { "_id": ide };
-        const newData = {$set: {task:{title: newTitle}}};
-        const update = task.updateOne(id, newData, (error, res)=>{
+        const newData = {$set: {blog:{title: newTitle}}};
+        const update = blog.updateOne(id, newData, (error, res)=>{
             if(error) throw Error;
         });
         if(update){
@@ -16,7 +16,7 @@ const adminupdatetitle = async (req, res)=>{
       } 
 
     catch (error) {
-        console.log("CompleteTask Error: ", error.message);
+        console.log("Completeblog Error: ", error.message);
       }
 }
-module.exports = adminupdatetitle;
+module.exports = adminupdateblog;

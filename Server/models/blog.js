@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const blogSchema = mongoose.Schema({
     task: {
             title: { type: String, require: true },
-            description: { type: String, require: true },
+            description: { type: String, require: false, default: null },
         },
     status: { type: Boolean},
     userCreated: {
