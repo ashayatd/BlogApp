@@ -23,4 +23,4 @@ userSchema.methods.generateAuthToken = async function(){
     }
 }
 
-module.exports = mongoose.model("reader", userSchema);
+module.exports = mongoose.model("user", userSchema);

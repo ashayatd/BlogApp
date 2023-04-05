@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
 
 const blogSchema = mongoose.Schema({
-    task: {
+    blog: {
             title: { type: String, require: true },
-            description: { type: String, require: false, default: null },
+            description: { type: String, require: true, default: null },
         },
     status: { type: Boolean},
     userCreated: {
