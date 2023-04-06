@@ -16,7 +16,7 @@ routes.get("/fetchblog",authenticate, fetchblog );
 routes.post("/deleteblog",authenticate, deleteblog );
 routes.post("/updateblog",authenticate, updateblog );
 routes.get('/username',authenticate, username);
-router.get('/fetchallblog', authenticate, fetchallblog );
+routes.get('/fetchallblog', authenticate, fetchallblog );
 
 
 module.exports = routes;

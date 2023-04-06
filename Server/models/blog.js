@@ -5,7 +5,6 @@ const blogSchema = mongoose.Schema({
             title: { type: String, require: true },
             description: { type: String, require: true, default: null },
         },
-    status: { type: Boolean},
     userCreated: {
         type: String,
         required: true,

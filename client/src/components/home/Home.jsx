@@ -22,7 +22,7 @@ function Home() {
       {
         blogs.map((elem, key)=>{
             return(
-                <h1 key={key}>{elem}</h1>
+                <h1 key={key}>{elem}</h1> // pagination
             )
         })
       }
