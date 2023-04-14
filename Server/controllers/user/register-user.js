@@ -6,8 +6,8 @@ const bcrypt = require("bcryptjs");
 async function register(req, res) {
   console.log("Reached Inside Register Route");
   try {
-    let { email, password, username, role } = req.body.data; // input from user
-    // console.log(email, password, username, role );
+    let { email, password, username, role } = req.body; // input from user
+    console.log(email, password, username, role );
     if (!(email && username && password)) {
       res.status(200);
       return res.send(JSON.stringify({ message: "all input required" }));

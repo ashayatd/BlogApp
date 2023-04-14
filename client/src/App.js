@@ -6,6 +6,7 @@ import Login from './components/login/Login';
 import About from './components/about/About';
 import Dashboard from './components/dashboard/users/Dashboard';
 import AdminDashboard from './components/dashboard/admin/AdminDashboard';
+import Addpost from `./components/addpost/Addpost`;
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/admindashboard" element={<AdminDashboard />} />
+          <Route path="/addblog" element={<Addpost/>} />
           {/* <Route path="*" element={<NoPage />} /> */}
       </Routes>
     </nav>

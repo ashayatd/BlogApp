@@ -5,7 +5,7 @@ async function addBlog(req, res) {
 
     try {
         let userCreated = jwt.verify(req.cookies.jwt, process.env.SECRET_KEY)._id;
-        let { title, description, status } = req.body; // input from user
+        let { title, description } = req.body; // input from user
 
         if (!(title)) {
             res.status(200);
@@ -16,10 +16,9 @@ async function addBlog(req, res) {
                 title,
                 description
             },
-            status,
             userCreated
         });
-        return res.status(201).json(blogCreate);
+        return res.status(201).json({msg:"Blog Successfully created"});
 
     } catch (err) {
         console.log("Error in Add Blog route:", err.message);

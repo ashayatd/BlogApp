@@ -13,8 +13,8 @@ const fetchallblog = require("../controllers/blogs/fetchallblog");
 
 routes.post("/addblog",authenticate, addblog );
 routes.get("/fetchblog",authenticate, fetchblog );
-routes.post("/deleteblog",authenticate, deleteblog );
-routes.post("/updateblog",authenticate, updateblog );
+routes.post("/deleteblog", deleteblog );
+routes.post("/updateblog", updateblog );
 routes.get('/username',authenticate, username);
 routes.get('/fetchallblog', authenticate, fetchallblog );
 

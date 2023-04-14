@@ -4,8 +4,8 @@ const pendinguser = require("../../models/pendinguserModel");
 
 const login = async (req, res) => {
   try {
-    const { Username, Password } = req.body.data;
-    //  console.log(JSON.stringify(req.body));
+    const { Username, Password } = req.body;
+    console.log(JSON.stringify(req.body));
 
     if (!Username || !Password) {
       return res.status(409).json({ message: "Please Fill the Data" });

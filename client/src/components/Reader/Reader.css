@@ -1,0 +1,63 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #000;
+    color: #fff;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .navbar ul {
+    list-style: none;
+  }
+  
+  .navbar ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    background-color: #ddd;
+    width: 200px;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar ul li a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  /* Body */
+  .main-content {
+    padding: 20px;
+  }
+  
+  /* Div at the bottom of body */
+  .bottom-div {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  

@@ -2,7 +2,10 @@ const mongoose = require("mongoose");
 
 const commentSchema = new mongoose.Schema({
     description:{type:String, default:null},
-    date:{
+    blogId: {type:String,
+        requires:true,
+    },
+    date: {
         type:Date,
         default:Date.now,
         required:true,
