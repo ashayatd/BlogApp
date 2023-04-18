@@ -138,8 +138,8 @@ export default function Regs() {
                   setRole(e.target.value);
                 }}
               >
-                <option defaultChecked={true} value={"user"} classNam="options">
-                  User
+                <option defaultChecked={true} value={"author"} classNam="options">
+                  Autor
                 </option>
                 <option value={"admin"} className="select-tag">
                   Admin

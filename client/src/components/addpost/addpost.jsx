@@ -1,17 +1,17 @@
-import {React, useState, useEffect} from 'react'
+import {React, useState} from 'react'
 
-function addpost() {
-    const [title, settitle] = useState("");
-    const [description, setdescription] = useState("");
+function Addpost() {
+    const [Title, setTitle] = useState("");
+    const [Description, setDescription] = useState("");
 
     const addposts = async ()=>{
-        console.log(title, description);
+        console.log(Title, Description);
         const res = await fetch("/api/addblog", {
           method: "POST",
           body: JSON.stringify({
             blog: {
-                title:title,
-                description:description
+                title:Title,
+                description:Description
             }, 
           }),
           headers: {
@@ -30,11 +30,11 @@ function addpost() {
   return (
     
     <div>
-      <input type='text' value={title} onChange={(e)=>{settitle(e.target.value)}}/>
-      <input type='text' value={description} onChange={(e)=>{setdescription(e.target.value)}}/>
-      <button onClick={()=>{addposts}}>Add Post</button>
+      <input type='text' value={Title} onChange={(e)=>{setTitle(e.target.value)}}/>
+      <input type='text' value={Description} onChange={(e)=>{setDescription(e.target.value)}}/>
+      <button onClick={()=>{addposts()}}>Add Post</button>
     </div>
   )
 }
 
-export default addpost
+export default Addpost

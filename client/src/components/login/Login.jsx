@@ -33,8 +33,8 @@ const Login = () => {
       window.alert(data.message);
     } else {
       console.log(data.message);
-      if (data.role === "user") {
-        navigate("/dashboard");
+      if (data.role === "author") {
+        navigate("/authordashboard");
       }
       if (data.role === "admin") {
         navigate("/admindashboard");
